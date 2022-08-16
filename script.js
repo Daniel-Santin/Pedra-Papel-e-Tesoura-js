@@ -29,6 +29,13 @@ function randomMove() {
 */
 function startGame(){
   statusDisplay.textContent = "Choose!";
+  
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].textContent = moveList[i];
+    buttons[i].style.display = "inline-block";
+  }
+  
+  moveDisplays.forEach(moveDisplay => moveDisplay.style.display="none");
 }
 
 /*
