@@ -1,7 +1,7 @@
 // declarações de variaveis
-let winMsg = "Victory";
-let loseMsg = "Crushing Defeat";
-let tieMsg = "Tie";
+let winMsg = "Ganhou, Boa";
+let loseMsg = "Perdeu kkkkkkk";
+let tieMsg = "Empatou né, tenta dnv";
 let moveList =["Rock","Paper","Scissors"];
 let statusDisplay = document.querySelector("#status-head");
 let moveDisplays = document.querySelectorAll(".move-display h2");
@@ -41,7 +41,7 @@ function randomMove() {
  * Inicia o Game
 */
 function startGame(){
-  statusDisplay.textContent = "Choose!";
+  statusDisplay.textContent = "PEDRA, PAPEL OU TESOURA?!";
   
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].textContent = moveList[i];
@@ -73,7 +73,7 @@ function endGame(event) {
 
   buttons.forEach((button, index) => {
     if (index == 1) {
-      button.textContent = "Play Again";
+      button.textContent = "VEM DENOVO, VAI ARREGA?";
       button.removeEventListener("click", endGame);
       button.addEventListener("click", startGame);
     } else {
