@@ -1,8 +1,8 @@
 // declarações de variaveis
 let winMsg = "Ganhou, Boa";
 let loseMsg = "Perdeu kkkkkkk";
-let tieMsg = "Empatou né, tenta dnv";
-let moveList =["Rock","Paper","Scissors"];
+let tieMsg = "Empatou né";
+let moveList =["Pedra","Papel","Tesoura"];
 let statusDisplay = document.querySelector("#status-head");
 let moveDisplays = document.querySelectorAll(".move-display h2");
 let buttons = document.querySelectorAll("button");
@@ -41,7 +41,7 @@ function randomMove() {
  * Inicia o Game
 */
 function startGame(){
-  statusDisplay.textContent = "PEDRA, PAPEL OU TESOURA?!";
+  statusDisplay.textContent = "JOKÊNPO!";
   
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].textContent = moveList[i];
@@ -68,12 +68,12 @@ function endGame(event) {
   moveDisplays.forEach(
     (moveDisplay) => (moveDisplay.style.display = "inline-block")
   );
-  moveDisplays[0].textContent = `You played ${moveList[playerMove]}`;
-  moveDisplays[1].textContent = `Computer played ${moveList[computerMove]}`;
+  moveDisplays[0].textContent = `Você jogou ${moveList[playerMove]}`;
+  moveDisplays[1].textContent = `Computador jogou ${moveList[computerMove]}`;
 
   buttons.forEach((button, index) => {
     if (index == 1) {
-      button.textContent = "DENOVO,VAI ARREGA?";
+      button.textContent = "Joga denovo!";
       button.removeEventListener("click", endGame);
       button.addEventListener("click", startGame);
     } else {
