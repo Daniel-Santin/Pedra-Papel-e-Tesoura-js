@@ -73,7 +73,7 @@ function endGame(event) {
 
   buttons.forEach((button, index) => {
     if (index == 1) {
-      button.textContent = "VEM DENOVO, VAI ARREGA?";
+      button.textContent = "DENOVO,VAI ARREGA?";
       button.removeEventListener("click", endGame);
       button.addEventListener("click", startGame);
     } else {
